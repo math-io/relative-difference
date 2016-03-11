@@ -7,7 +7,7 @@ Relative Difference
 The [relative difference][relative-difference] of two real `numbers` is defined as
 
 <div class="equation" align="center" data-raw-text="\Delta(x,y) = \frac{|x - y|}{|f(x,y)|} = \left|\frac{x - y}{f(x,y)}\right|" data-equation="eq:relative_difference">
-	<img src="" alt="Relative difference">
+	<img src="https://cdn.rawgit.com/math-io/relative-difference/0463ace90006fa3032b073c6cb5add1dd5e065e4/docs/img/eqn.svg" alt="Relative difference">
 	<br>
 </div>
 
