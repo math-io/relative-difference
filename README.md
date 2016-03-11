@@ -27,9 +27,28 @@ $ npm install math-relative-difference
 var diff = require( 'math-relative-difference' );
 ```
 
-#### diff( x, y[, method] )
+#### diff( x, y[, scale] )
 
 Computes the [relative difference][relative-difference] of two real numbers.
+
+``` javascript
+
+```
+
+By default, the `function` scales the [absolute difference][absolute-difference] by dividing the [absolute difference][absolute-difference] by the maximum [absolute value][absolute-value] of `x` and `y`. To scale by a different `function`, specify a scale function name. The following scale functions are supported:
+
+*	__max-abs__: maximum [absolute value][absolute-value] of `x` and `y` (*default*).
+*	__max__: maximum value of `x` and `y`.
+*	__min-abs__: minimum [absolute value][absolute-value] of `x` and `y`.
+*	__min__: minimum value of `x` and `y`.
+*	__mean-abs__: arithmetic mean of the [absolute values][absolute-value] of `x` and `y`.
+*	__mean__: arithmetic mean of `x` and `y`.
+
+``` javascript
+
+```
+
+To use a custom scale `function`, provide a `function` which accepts two numeric arguments `x` and `y`.
 
 ``` javascript
 
@@ -141,5 +160,6 @@ Copyright &copy; 2016. The [Compute.io][compute-io] Authors.
 [testling]: https://ci.testling.com
 
 [compute-io]: https://github.com/compute-io/
-[relative-difference]: https://en.wikipedia.org/wiki/Relative_change_and_difference
+[absolute-value]: https://github.com/math-io/abs
 [absolute-difference]: https://github.com/math-io/absolute-difference
+[relative-difference]: https://en.wikipedia.org/wiki/Relative_change_and_difference
