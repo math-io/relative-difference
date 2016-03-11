@@ -6,10 +6,12 @@ Relative Difference
 
 The [relative difference][relative-difference] of two real `numbers` is defined as
 
-<div class="equation" align="center" data-raw-text="\Delta(x,y) = \frac{|x - y|}{|f(x,y)|}" data-equation="eq:relative_difference">
-	<img src="https://cdn.rawgit.com/math-io/relative-difference/f6ad0396cb97a5ce8e0acfcbc630945f1963c8c1/docs/img/eqn.svg" alt="Relative difference">
+<div class="equation" align="center" data-raw-text="\Delta(x,y) = \frac{|x - y|}{|f(x,y)|} = \left|\frac{x - y}{f(x,y)}\right|" data-equation="eq:relative_difference">
+	<img src="" alt="Relative difference">
 	<br>
 </div>
+
+where `|x-y|` is the [absolute difference][absolute-difference] and `f(x,y)` is a scale function.
 
 
 ## Installation
@@ -140,3 +142,4 @@ Copyright &copy; 2016. The [Compute.io][compute-io] Authors.
 
 [compute-io]: https://github.com/compute-io/
 [relative-difference]: https://en.wikipedia.org/wiki/Relative_change_and_difference
+[absolute-difference]: https://github.com/math-io/absolute-difference

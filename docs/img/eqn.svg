@@ -1,6 +1,6 @@
-<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="19.1ex" height="6.509ex" style="vertical-align: -2.671ex;" viewBox="0 -1652.5 8223.4 2802.6" role="math" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title MathJax-SVG-1-Desc">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="30.935ex" height="6.509ex" style="vertical-align: -2.671ex;" viewBox="0 -1652.5 13319.1 2802.6" role="math" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title MathJax-SVG-1-Desc">
 <title id="MathJax-SVG-1-Title">Equation</title>
-<desc id="MathJax-SVG-1-Desc">normal upper Delta left-parenthesis x comma y right-parenthesis equals StartFraction StartAbsoluteValue x minus y EndAbsoluteValue Over StartAbsoluteValue f left-parenthesis x comma y right-parenthesis EndAbsoluteValue EndFraction</desc>
+<desc id="MathJax-SVG-1-Desc">normal upper Delta left-parenthesis x comma y right-parenthesis equals StartFraction StartAbsoluteValue x minus y EndAbsoluteValue Over StartAbsoluteValue f left-parenthesis x comma y right-parenthesis EndAbsoluteValue EndFraction equals StartAbsoluteValue StartFraction x minus y Over f left-parenthesis x comma y right-parenthesis EndFraction EndAbsoluteValue</desc>
 <defs aria-hidden="true">
 <path stroke-width="1" id="E1-MJMAIN-394" d="M51 0Q46 4 46 7Q46 9 215 357T388 709Q391 716 416 716Q439 716 444 709Q447 705 616 357T786 7Q786 4 781 0H51ZM507 344L384 596L137 92L383 91H630Q630 93 507 344Z"></path>
 <path stroke-width="1" id="E1-MJMAIN-28" d="M94 250Q94 319 104 381T127 488T164 576T202 643T244 695T277 729T302 750H315H319Q333 750 333 741Q333 738 316 720T275 667T226 581T184 443T167 250T184 58T225 -81T274 -167T316 -220T333 -241Q333 -250 318 -250H315H302L274 -226Q180 -141 137 -14T94 250Z"></path>
@@ -12,6 +12,7 @@
 <path stroke-width="1" id="E1-MJMAIN-7C" d="M139 -249H137Q125 -249 119 -235V251L120 737Q130 750 139 750Q152 750 159 735V-235Q151 -249 141 -249H139Z"></path>
 <path stroke-width="1" id="E1-MJMAIN-2212" d="M84 237T84 250T98 270H679Q694 262 694 250T679 230H98Q84 237 84 250Z"></path>
 <path stroke-width="1" id="E1-MJMATHI-66" d="M118 -162Q120 -162 124 -164T135 -167T147 -168Q160 -168 171 -155T187 -126Q197 -99 221 27T267 267T289 382V385H242Q195 385 192 387Q188 390 188 397L195 425Q197 430 203 430T250 431Q298 431 298 432Q298 434 307 482T319 540Q356 705 465 705Q502 703 526 683T550 630Q550 594 529 578T487 561Q443 561 443 603Q443 622 454 636T478 657L487 662Q471 668 457 668Q445 668 434 658T419 630Q412 601 403 552T387 469T380 433Q380 431 435 431Q480 431 487 430T498 424Q499 420 496 407T491 391Q489 386 482 386T428 385H372L349 263Q301 15 282 -47Q255 -132 212 -173Q175 -205 139 -205Q107 -205 81 -186T55 -132Q55 -95 76 -78T118 -61Q162 -61 162 -103Q162 -122 151 -136T127 -157L118 -162Z"></path>
+<path stroke-width="1" id="E1-MJMAIN-2223" d="M139 -249H137Q125 -249 119 -235V251L120 737Q130 750 139 750Q152 750 159 735V-235Q151 -249 141 -249H139Z"></path>
 </defs>
 <g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
  <use xlink:href="#E1-MJMAIN-394" x="0" y="0"></use>
@@ -41,6 +42,41 @@
  <use xlink:href="#E1-MJMAIN-29" x="2733" y="0"></use>
  <use xlink:href="#E1-MJMAIN-7C" x="3123" y="0"></use>
 </g>
+</g>
+</g>
+ <use xlink:href="#E1-MJMAIN-3D" x="8501" y="0"></use>
+<g transform="translate(9557,0)">
+<g transform="translate(0,1521)">
+ <use xlink:href="#E1-MJMAIN-2223" x="0" y="-751"></use>
+<g transform="translate(0,-1431.7562887112888) scale(1,0.6401548451548452)">
+ <use xlink:href="#E1-MJMAIN-2223"></use>
+</g>
+ <use xlink:href="#E1-MJMAIN-2223" x="0" y="-2293"></use>
+</g>
+<g transform="translate(278,0)">
+<g transform="translate(120,0)">
+<rect stroke="none" width="2964" height="60" x="0" y="220"></rect>
+<g transform="translate(335,725)">
+ <use xlink:href="#E1-MJMATHI-78" x="0" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-2212" x="794" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-79" x="1795" y="0"></use>
+</g>
+<g transform="translate(60,-771)">
+ <use xlink:href="#E1-MJMATHI-66" x="0" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-28" x="550" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-78" x="940" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-2C" x="1512" y="0"></use>
+ <use xlink:href="#E1-MJMATHI-79" x="1957" y="0"></use>
+ <use xlink:href="#E1-MJMAIN-29" x="2455" y="0"></use>
+</g>
+</g>
+</g>
+<g transform="translate(3483,1521)">
+ <use xlink:href="#E1-MJMAIN-2223" x="0" y="-751"></use>
+<g transform="translate(0,-1431.7562887112888) scale(1,0.6401548451548452)">
+ <use xlink:href="#E1-MJMAIN-2223"></use>
+</g>
+ <use xlink:href="#E1-MJMAIN-2223" x="0" y="-2293"></use>
 </g>
 </g>
 </g>
