@@ -136,3 +136,34 @@ tape( 'if `x` and `y` both equal `+-0`, the function returns `0`', function test
 
 	t.end();
 });
+
+tape( 'if a scale function returns `0`, the function returns `NaN`', function test( t ) {
+	var d;
+
+	d = diff( -1, 1, 'mean' );
+	t.ok( d !== d, 'returns NaN' );
+
+	d = diff( -1, 0, 'max' );
+	t.ok( d !== d, 'returns NaN' );
+
+	d = diff( 0, 1, 'min' );
+	t.ok( d !== d, 'returns NaN' );
+
+	d = diff( 0, -1, 'min-abs' );
+	t.ok( d !== d, 'returns NaN' );
+
+	d = diff( 0, 5, 'x' );
+	t.ok( d !== d, 'returns NaN' );
+
+	d = diff( 5, 0, 'y' );
+	t.ok( d !== d, 'returns NaN' );
+
+	d = diff( 2, 5, scale );
+	t.ok( d !== d, 'returns NaN' );
+
+	t.end();
+
+	function scale() {
+		return 0;
+	}
+});
