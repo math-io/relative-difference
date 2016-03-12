@@ -54,8 +54,8 @@ The following `scale` functions are supported:
 *	__min__: minimum value of `x` and `y`.
 *	__mean-abs__: arithmetic mean of the [absolute values][absolute-value] of `x` and `y`.
 *	__mean__: arithmetic mean of `x` and `y`.
-*	__x__: `x`.
-*	__y__: `y`.
+*	__x__: `x` (*noncommutative*).
+*	__y__: `y` (*noncommutative*).
 
 By default, the `function` scales the [absolute difference][absolute-difference] by dividing the [absolute difference][absolute-difference] by the maximum [absolute value][absolute-value] of `x` and `y`. To scale by a different `function`, specify a scale function name. 
 
