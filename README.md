@@ -46,7 +46,7 @@ d = diff( -1, 3.14 );
 // returns 4.14/3.14 = ~1.318
 ```
 
-By default, the `function` scales the [absolute difference][absolute-difference] by dividing the [absolute difference][absolute-difference] by the maximum [absolute value][absolute-value] of `x` and `y`. To scale by a different `function`, specify a scale function name. The following scale functions are supported:
+The following scale functions are supported:
 
 *	__max-abs__: maximum [absolute value][absolute-value] of `x` and `y` (*default*).
 *	__max__: maximum value of `x` and `y`.
@@ -56,6 +56,8 @@ By default, the `function` scales the [absolute difference][absolute-difference]
 *	__mean__: arithmetic mean of `x` and `y`.
 *	__x__: `x`.
 *	__y__: `y`.
+
+By default, the `function` scales the [absolute difference][absolute-difference] by dividing the [absolute difference][absolute-difference] by the maximum [absolute value][absolute-value] of `x` and `y`. To scale by a different `function`, specify a scale function name. 
 
 ``` javascript
 var d = diff( -2, 5 );
