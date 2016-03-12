@@ -167,3 +167,153 @@ tape( 'if a scale function returns `0`, the function returns `NaN`', function te
 		return 0;
 	}
 });
+
+tape( 'the function computes the relative difference (default)', function test( t ) {
+	var d;
+
+	d = diff( -2, 5 );
+	t.equal( d, 1.4, 'returns 1.4' );
+
+	d = diff( 5, -2 );
+	t.equal( d, 1.4, 'returns 1.4' );
+
+	t.end();
+});
+
+tape( 'the function computes the relative difference (max-abs)', function test( t ) {
+	var d;
+
+	d = diff( -2, 5, 'max-abs' );
+	t.equal( d, 1.4, 'returns 1.4' );
+
+	d = diff( 5, -2, 'max-abs' );
+	t.equal( d, 1.4, 'returns 1.4' );
+
+	t.end();
+});
+
+tape( 'the function computes the relative difference (max)', function test( t ) {
+	var d;
+
+	d = diff( 1, 10, 'max' );
+	t.equal( d, 0.9, 'returns 0.9' );
+
+	d = diff( 10, 1, 'max' );
+	t.equal( d, 0.9, 'returns 0.9' );
+
+	d = diff( -1, -10, 'max' );
+	t.equal( d, 9, 'returns 9' );
+
+	d = diff( -10, -1, 'max' );
+	t.equal( d, 9, 'returns 9' );
+
+	t.end();
+});
+
+tape( 'the function computes the relative difference (min-abs)', function test( t ) {
+	var d;
+
+	d = diff( 1, 10, 'min' );
+	t.equal( d, 9, 'returns 9' );
+
+	d = diff( 10, 1, 'min-abs' );
+	t.equal( d, 9, 'returns 9' );
+
+	d = diff( -1, 10, 'min-abs' );
+	t.equal( d, 11, 'returns 11' );
+
+	d = diff( 10, -1, 'min-abs' );
+	t.equal( d, 11, 'returns 11' );
+
+	t.end();
+});
+
+tape( 'the function computes the relative difference (min)', function test( t ) {
+	var d;
+
+	d = diff( 1, 10, 'min' );
+	t.equal( d, 9, 'returns 9' );
+
+	d = diff( 10, 1, 'min' );
+	t.equal( d, 9, 'returns 9' );
+
+	d = diff( -1, 10, 'min' );
+	t.equal( d, 11, 'returns 11' );
+
+	d = diff( 10, -1, 'min' );
+	t.equal( d, 11, 'returns 11' );
+
+	t.end();
+});
+
+tape( 'the function computes the relative difference (x)', function test( t ) {
+	var d;
+
+	d = diff( 1, 10, 'x' );
+	t.equal( d, 9, 'returns 9' );
+
+	d = diff( 10, 1, 'x' );
+	t.equal( d, 0.9, 'returns 0.9' );
+
+	d = diff( -1, 10, 'x' );
+	t.equal( d, 11, 'returns 11' );
+
+	d = diff( 10, -1, 'x' );
+	t.equal( d, 1.1, 'returns 1.1' );
+
+	t.end();
+});
+
+tape( 'the function computes the relative difference (y)', function test( t ) {
+	var d;
+
+	d = diff( 1, 10, 'y' );
+	t.equal( d, 0.9, 'returns 0.9' );
+
+	d = diff( 10, 1, 'y' );
+	t.equal( d, 9, 'returns 9' );
+
+	d = diff( -1, 10, 'y' );
+	t.equal( d, 1.1, 'returns 1.1' );
+
+	d = diff( 10, -1, 'y' );
+	t.equal( d, 11, 'returns 11' );
+
+	t.end();
+});
+
+tape( 'the function computes the relative difference (mean)', function test( t ) {
+	var d;
+
+	d = diff( 1, 10, 'mean' );
+	t.equal( d, 9/5.5, 'returns 9/5.5' );
+
+	d = diff( 10, 1, 'mean' );
+	t.equal( d, 9/5.5, 'returns 9/5.5' );
+
+	d = diff( -1, 10, 'mean' );
+	t.equal( d, 11/4.5, 'returns 11/4.5' );
+
+	d = diff( 10, -1, 'mean' );
+	t.equal( d, 11/4.5, 'returns 11/4.5' );
+
+	t.end();
+});
+
+tape( 'the function computes the relative difference (mean-abs)', function test( t ) {
+	var d;
+
+	d = diff( 1, 10, 'mean-abs' );
+	t.equal( d, 9/5.5, 'returns 9/5.5' );
+
+	d = diff( 10, 1, 'mean-abs' );
+	t.equal( d, 9/5.5, 'returns 9/5.5' );
+
+	d = diff( -1, 10, 'mean-abs' );
+	t.equal( d, 11/5.5, 'returns 11/5.5' );
+
+	d = diff( 10, -1, 'mean-abs' );
+	t.equal( d, 11/5.5, 'returns 11/5.5' );
+
+	t.end();
+});
