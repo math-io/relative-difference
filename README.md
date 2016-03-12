@@ -46,7 +46,7 @@ d = diff( -1, 3.14 );
 // returns 4.14/3.14 = ~1.318
 ```
 
-The following scale functions are supported:
+The following `scale` functions are supported:
 
 *	__max-abs__: maximum [absolute value][absolute-value] of `x` and `y` (*default*).
 *	__max__: maximum value of `x` and `y`.
