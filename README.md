@@ -11,12 +11,14 @@ The [relative difference][relative-difference] of two real `numbers` is defined 
 	<br>
 </div>
 
-where `|x-y|` is the [absolute difference][absolute-difference] and `f(x,y)` is a scale function. Common scale functions include:
+where `|x-y|` is the [absolute difference][absolute-difference] and `f(x,y)` is a scale function. Common scale functions include
 
 <div class="equation" align="center" data-raw-text="\begin{align*}f(x,y) &amp;= \max(|x|, |y|)\\f(x,y) &amp;= \max(x,y)\\ f(x,y) &amp;= \min(|x|,|y|)\\f(x,y) &amp;= \min(x,y) \\f(x,y) &amp;= \frac{|x|+|y|}{2} \\f(x,y) &amp;= \frac{x + y}{2}\end{align*}" data-equation="eq:scale_functions">
 	<img src="https://cdn.rawgit.com/math-io/relative-difference/3251fd85fe26662f1e4e84038923015520177182/docs/img/scale_functions.svg" alt="Scale functions">
 	<br>
 </div>
+
+The choice of scale function depends on application context.
 
 
 ## Installation
@@ -37,7 +39,11 @@ var diff = require( 'math-relative-difference' );
 Computes the [relative difference][relative-difference] of two real numbers.
 
 ``` javascript
+var d = diff( 2, 5 );
+// returns 3/5 = 0.6
 
+d = diff( -1, 3.14 );
+// returns 4.14/3.14 = ~1.318
 ```
 
 By default, the `function` scales the [absolute difference][absolute-difference] by dividing the [absolute difference][absolute-difference] by the maximum [absolute value][absolute-value] of `x` and `y`. To scale by a different `function`, specify a scale function name. The following scale functions are supported:
@@ -48,16 +54,66 @@ By default, the `function` scales the [absolute difference][absolute-difference]
 *	__min__: minimum value of `x` and `y`.
 *	__mean-abs__: arithmetic mean of the [absolute values][absolute-value] of `x` and `y`.
 *	__mean__: arithmetic mean of `x` and `y`.
+*	__x__: `x`.
+*	__y__: `y`.
 
 ``` javascript
+var d = diff( -2, 5 );
+// returns |-7/5| = 1.4
 
+d = diff( -2, 5, 'max-abs' );
+// returns |-7/5| = 1.4
+
+d = diff( -2, 5, 'max' )
+// returns |-7/5| = 1.4
+
+d = diff( -2, 5, 'min-abs' );
+// returns |-7/2| = 3.5
+
+d = diff( -2, 5, 'min' );
+// returns |-7/-2| = 3.5
+
+d = diff( -2, 5, 'mean-abs' );
+// returns |-7/3.5| = 2
+
+d = diff( -2, 5, 'mean' );
+// returns |-7/1| = 7
 ```
 
 To use a custom scale `function`, provide a `function` which accepts two numeric arguments `x` and `y`.
 
 ``` javascript
+var abs = require( 'math-abs' );
+var EPS = require( 'const-eps-float64' );
 
+function scale( x, y ) {
+	var s;
+	x = abs( x );
+	y = abs( y );
+	
+	// Maximum absolute value:
+	s = (x < y ) ? y : x;
+
+	// Scale in units of epsilon: 
+	return s * EPS;
+}
+
+var d = diff( 12.15, 12.149999999999999 );
+// returns ~0.658
 ```
+
+
+## Notes
+
+*	If the [absolute difference][absolute-difference] of `x` and `y` is `0`, the relative difference is __always__ `0`.
+
+	``` javascript
+	var d = diff( 0, 0 );
+	// returns 0
+
+	d = diff( 3.14, 3.14 );
+	// returns 0
+	```
 
 
 ## Examples
@@ -73,7 +129,32 @@ var i;
 for ( i = 0; i < 100; i++ ) {
 	x = Math.random()*1e4 - 1e2;
 	y = Math.random()*1e4 - 1e2;
+
 	d = diff( x, y );
+	console.log( 'x = %d. y = %d. d = %d.', x, y, d );
+
+	d = diff( x, y, 'max-abs' );
+	console.log( 'x = %d. y = %d. d = %d.', x, y, d );
+
+	d = diff( x, y, 'max' );
+	console.log( 'x = %d. y = %d. d = %d.', x, y, d );
+
+	d = diff( x, y, 'min-abs' );
+	console.log( 'x = %d. y = %d. d = %d.', x, y, d );
+
+	d = diff( x, y, 'min' );
+	console.log( 'x = %d. y = %d. d = %d.', x, y, d );
+
+	d = diff( x, y, 'mean-abs' );
+	console.log( 'x = %d. y = %d. d = %d.', x, y, d );
+
+	d = diff( x, y, 'mean' );
+	console.log( 'x = %d. y = %d. d = %d.', x, y, d );
+
+	d = diff( x, y, 'x' );
+	console.log( 'x = %d. y = %d. d = %d.', x, y, d );
+
+	d = diff( x, y, 'y' );
 	console.log( 'x = %d. y = %d. d = %d.', x, y, d );
 }
 ```
