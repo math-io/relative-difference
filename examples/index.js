@@ -14,6 +14,6 @@ for ( i = 0; i < 100; i++ ) {
 	y = Math.random()*1e4 - 5e3;
 	for ( j = 0; j < scales.length; j++ ) {
 		d = diff( x, y, scales[j] );
-		console.log( 'x = %d. y = %d. d = %d. Scale: %s', x, y, d, scales[j] );
+		console.log( 'x = %d. y = %d. d = %d. scale: %s.', x, y, d, scales[j] );
 	}
 }
