@@ -80,6 +80,18 @@ d = diff( -2, 5, 'mean-abs' );
 
 d = diff( -2, 5, 'mean' );
 // returns |-7/1| = 7
+
+d = diff( -2, 5, 'x' );
+// returns |-7/-2| = 3.5
+
+d = diff( 5, -2, 'x' );
+// returns |7/5| = 1.4
+
+d = diff( -2, 5, 'y' );
+// returns |-7/5| = 1.4
+
+d = diff( 5, -2, 'y' );
+// returns |7/-2| = 3.5
 ```
 
 To use a custom scale `function`, provide a `function` which accepts two numeric arguments `x` and `y`.
