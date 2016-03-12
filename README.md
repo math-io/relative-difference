@@ -98,7 +98,7 @@ function scale( x, y ) {
 	return s * EPS;
 }
 
-var d = diff( 12.15, 12.149999999999999 );
+var d = diff( 12.15, 12.149999999999999, scale );
 // returns ~0.658
 ```
 
