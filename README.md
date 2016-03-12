@@ -116,6 +116,39 @@ var d = diff( 12.15, 12.149999999999999, scale );
 	d = diff( 3.14, 3.14 );
 	// returns 0
 	```
+*	If `|x| = |y| = infinity`, the function returns `NaN`.
+
+	``` javascript
+	var PINF = Number.POSITIVE_INFINITY;
+	var NINF = Number.NEGATIVE_INFINITY;
+
+	var d = diff( PINF, PINF );
+	// returns NaN
+
+	d = diff( NINF, NINF );
+	// returns NaN
+	``` 
+* 	If `|x| = |-y| = infinity`, the relative difference is `+infinity`.
+
+	``` javascript
+	var PINF = Number.POSITIVE_INFINITY;
+	var NINF = Number.NEGATIVE_INFINITY;
+
+	var d = diff( PINF, NINF );
+	// returns +infinity
+
+	d = diff( NINF, PINF );
+	// returns +infinity
+	```
+*	If a `scale` function returns `0`, the function returns `NaN`.
+
+	``` javascript
+	var d = diff( 0, 2, 'mean' );
+	// returns |2/1| = 1
+
+	d = diff( -1, 1, 'mean' );
+	// returns NaN => |2/0|
+	```
 
 
 ## Examples
