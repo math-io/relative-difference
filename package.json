@@ -47,7 +47,10 @@
     "url": "https://github.com/math-io/relative-difference/issues"
   },
   "dependencies": {
-    "math-abs": "^1.0.2"
+    "const-ninf-float64": "^1.0.0",
+    "const-pinf-float64": "^1.0.0",
+    "math-abs": "^1.0.2",
+    "validate.io-function": "^1.0.2"
   },
   "devDependencies": {
     "browserify": "13.x.x",
