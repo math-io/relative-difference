@@ -156,7 +156,7 @@ var d = diff( 12.15, 12.149999999999999, scale );
 
 	``` javascript
 	var d = diff( 0, 2, 'mean' );
-	// returns |2/1| = 1
+	// returns |2/1| = 2
 
 	d = diff( -1, 1, 'mean' );
 	// returns NaN => |2/0|
