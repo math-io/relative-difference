@@ -11,7 +11,12 @@ The [relative difference][relative-difference] of two real `numbers` is defined 
 	<br>
 </div>
 
-where `|x-y|` is the [absolute difference][absolute-difference] and `f(x,y)` is a scale function.
+where `|x-y|` is the [absolute difference][absolute-difference] and `f(x,y)` is a scale function. Common scale functions include:
+
+<div class="equation" align="center" data-raw-text="\begin{align*}f(x,y) &amp;= \max(|x|, |y|)\\f(x,y) &amp;= \max(x,y)\\ f(x,y) &amp;= \min(|x|,|y|)\\f(x,y) &amp;= \min(x,y) \\f(x,y) &amp;= \frac{|x|+|y|}{2} \\f(x,y) &amp;= \frac{x + y}{2}\end{align*}" data-equation="eq:scale_functions">
+	<img src="" alt="Scale functions">
+	<br>
+</div>
 
 
 ## Installation
