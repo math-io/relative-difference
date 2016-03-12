@@ -5,6 +5,8 @@
 var tape = require( 'tape' );
 var PINF = require( 'const-pinf-float64' );
 var NINF = require( 'const-ninf-float64' );
+var EPS = require( 'const-eps-float64' );
+var abs = require( 'math-abs' );
 var diff = require( './../lib' );
 
 
@@ -316,4 +318,28 @@ tape( 'the function computes the relative difference (mean-abs)', function test(
 	t.equal( d, 11/5.5, 'returns 11/5.5' );
 
 	t.end();
+});
+
+tape( 'the function supports custom scale functions', function test( t ) {
+	var expected;
+	var d;
+
+	d = diff( 12.15, 12.149999999999999, scale );
+
+	expected = ((12.15-12.149999999999999)/12.15) / EPS;
+
+	t.equal( d, expected, 'returns '+expected );
+	t.end();
+
+	function scale( x, y ) {
+		var s;
+		x = abs( x );
+		y = abs( y );
+
+		// Max absolute value:
+		s = ( x < y ) ? y : x;
+
+		// Scale in units of epsilon:
+		return s * EPS;
+	}
 });
