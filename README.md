@@ -79,7 +79,7 @@ d = diff( -2, 5, 'mean-abs' );
 // returns |-7/3.5| = 2
 
 d = diff( -2, 5, 'mean' );
-// returns |-7/1| = 7
+// returns |-7/1.5| = ~4.67
 
 d = diff( -2, 5, 'x' );
 // returns |-7/-2| = 3.5
