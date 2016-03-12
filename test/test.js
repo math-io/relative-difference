@@ -215,7 +215,7 @@ tape( 'the function computes the relative difference (max)', function test( t ) 
 tape( 'the function computes the relative difference (min-abs)', function test( t ) {
 	var d;
 
-	d = diff( 1, 10, 'min' );
+	d = diff( 1, 10, 'min-abs' );
 	t.equal( d, 9, 'returns 9' );
 
 	d = diff( 10, 1, 'min-abs' );
