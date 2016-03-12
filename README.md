@@ -7,14 +7,14 @@ Relative Difference
 The [relative difference][relative-difference] of two real `numbers` is defined as
 
 <div class="equation" align="center" data-raw-text="\Delta(x,y) = \frac{|x - y|}{|f(x,y)|} = \left|\frac{x - y}{f(x,y)}\right|" data-equation="eq:relative_difference">
-	<img src="https://cdn.rawgit.com/math-io/relative-difference/0463ace90006fa3032b073c6cb5add1dd5e065e4/docs/img/eqn.svg" alt="Relative difference">
+	<img src="" alt="Relative difference">
 	<br>
 </div>
 
 where `|x-y|` is the [absolute difference][absolute-difference] and `f(x,y)` is a scale function. Common scale functions include:
 
 <div class="equation" align="center" data-raw-text="\begin{align*}f(x,y) &amp;= \max(|x|, |y|)\\f(x,y) &amp;= \max(x,y)\\ f(x,y) &amp;= \min(|x|,|y|)\\f(x,y) &amp;= \min(x,y) \\f(x,y) &amp;= \frac{|x|+|y|}{2} \\f(x,y) &amp;= \frac{x + y}{2}\end{align*}" data-equation="eq:scale_functions">
-	<img src="" alt="Scale functions">
+	<img src="https://cdn.rawgit.com/math-io/relative-difference/3251fd85fe26662f1e4e84038923015520177182/docs/img/scale_functions.svg" alt="Scale functions">
 	<br>
 </div>
 
