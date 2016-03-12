@@ -156,41 +156,20 @@ var d = diff( 12.15, 12.149999999999999, scale );
 ``` javascript
 var diff = require( 'math-relative-difference' );
 
+var scales = [ 'max-abs', 'max', 'min-abs', 'min', 'mean-abs', 'mean', 'x', 'y' ];
 var x;
 var y;
 var d;
 var i;
+var j;
 
 for ( i = 0; i < 100; i++ ) {
-	x = Math.random()*1e4 - 1e2;
-	y = Math.random()*1e4 - 1e2;
-
-	d = diff( x, y );
-	console.log( 'x = %d. y = %d. d = %d.', x, y, d );
-
-	d = diff( x, y, 'max-abs' );
-	console.log( 'x = %d. y = %d. d = %d.', x, y, d );
-
-	d = diff( x, y, 'max' );
-	console.log( 'x = %d. y = %d. d = %d.', x, y, d );
-
-	d = diff( x, y, 'min-abs' );
-	console.log( 'x = %d. y = %d. d = %d.', x, y, d );
-
-	d = diff( x, y, 'min' );
-	console.log( 'x = %d. y = %d. d = %d.', x, y, d );
-
-	d = diff( x, y, 'mean-abs' );
-	console.log( 'x = %d. y = %d. d = %d.', x, y, d );
-
-	d = diff( x, y, 'mean' );
-	console.log( 'x = %d. y = %d. d = %d.', x, y, d );
-
-	d = diff( x, y, 'x' );
-	console.log( 'x = %d. y = %d. d = %d.', x, y, d );
-
-	d = diff( x, y, 'y' );
-	console.log( 'x = %d. y = %d. d = %d.', x, y, d );
+	x = Math.random()*1e4 - 5e3;
+	y = Math.random()*1e4 - 5e3;
+	for ( j = 0; j < scales.length; j++ ) {
+		d = diff( x, y, scales[j] );
+		console.log( 'x = %d. y = %d. d = %d. Scale: %s', x, y, d, scales[j] );
+	}
 }
 ```
 
