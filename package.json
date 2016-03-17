@@ -1,6 +1,6 @@
 {
   "name": "math-relative-difference",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Computes the relative difference of two real numbers.",
   "author": {
     "name": "Athan Reines",
